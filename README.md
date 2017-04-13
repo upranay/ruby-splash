@@ -1,2 +1,2 @@
 # ruby-splash
-App service splash site for ruby on rails 
+Sample ruby application for use on Azure App Service. 
