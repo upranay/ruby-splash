@@ -5,21 +5,42 @@
 #   gem 'sqlite3'
 #
 default: &default
-  adapter: sqlite3
+  adapter: postgresql
+  encoding: unicode
+  host: postgres-dayplanner.database.windows.net
+  username: postgres@postgres-dayplanner
+  password: pg@12345
   pool: 5
-  timeout: 5000
 
 development:
   <<: *default
-  database: db/development.sqlite3
+  database: dayplanner
+  
+  
+azure_dayplanner_db:
+  adapter: postgresql
+  host: postgresql3jx7gzpurh7yi.postgres.database.azure.com
+  database: dayplanner
+  username: postgres@postgresql3jx7gzpurh7yi
+  password: pg@12345
+  port: 5432
+  
+  
+# azure_dayplanner_db:
+  # adapter: postgresql
+  # host: localhost
+  # database: microsoft
+  # username: postgres
+  # password: postgresql
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
+
 test:
   <<: *default
-  database: db/test.sqlite3
+  database: dayplanner
 
 production:
   <<: *default
-  database: db/production.sqlite3
+  database: dayplanner
