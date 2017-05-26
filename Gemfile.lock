@@ -107,6 +107,7 @@ PLATFORMS
 
 DEPENDENCIES
   puma (~> 3.0)
+  pg (~> 0.20)
   rails (~> 5.0.0, >= 5.0.0.1)
   sqlite3
 
